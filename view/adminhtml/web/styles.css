@@ -1,0 +1,14 @@
+.devdashboard_developer_widgets section {
+    border: teal 2px solid;
+    width: 33%;
+    margin-right: 0.5%;
+    float: left;
+}
+.devdashboard_developer_widgets section > div {
+    padding: 0.5em;
+}
+.devdashboard_developer_widgets h2 {
+    background-color: teal;
+    color: white;
+    padding: 1em 0.5em 0.5em;
+}

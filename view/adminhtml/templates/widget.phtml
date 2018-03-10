@@ -1,0 +1,7 @@
+<?php
+/** @var \Magento\Backend\Block\Template $block */
+?>
+<section>
+    <h2><?php echo $block->escapeHtml(__($block->getData('title'))) ?></h2>
+    <div><?php echo $block->getChildHtml(); ?></div>
+</section>
