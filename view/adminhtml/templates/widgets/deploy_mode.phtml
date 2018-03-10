@@ -2,6 +2,4 @@
 /** @var \Firegento\DevDashboard\ViewModel\Widget\DeployMode $viewModel */
 $viewModel = $block->getData('viewModel');
 ?>
-<div class="deploy_mode_widget">
-    <?php echo __('Deploy Mode: %1', $viewModel->getDeployMode());?>
-</div>
+<?php echo __('Deploy Mode: %1', $viewModel->getDeployMode());?>

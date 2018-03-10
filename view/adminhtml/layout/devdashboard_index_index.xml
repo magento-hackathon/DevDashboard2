@@ -34,6 +34,17 @@
                         </arguments>
                     </block>
                 </block>
+                <block name="devdashboard.widget.moduleList" template="Firegento_DevDashboard::widget.phtml">
+                    <arguments>
+                        <argument name="title" xsi:type="string">Module List</argument>
+                    </arguments>
+                    <block name="devdashboard.moduleList" template="Firegento_DevDashboard::widgets/module_list.phtml">
+                        <arguments>
+                            <argument name="viewModel"
+                                      xsi:type="object">Firegento\DevDashboard\ViewModel\Widget\ModuleList</argument>
+                        </arguments>
+                    </block>
+                </block>
                 <referenceBlock name="adminhtml.cache.massaction">
                     <arguments>
                         <argument name="options" xsi:type="array">

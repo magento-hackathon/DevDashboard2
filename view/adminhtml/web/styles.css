@@ -34,3 +34,8 @@
 .devdashboard_developer_widgets_placeholder {
     border: 3px darkgray dashed!important;
 }
+
+.devdashboard_developer_widgets .module_list {width: 100%; padding: 0 2em}
+.devdashboard_developer_widgets .module_list td,
+.devdashboard_developer_widgets .module_list th {text-align: left; padding: 0.5em 1em}
+.devdashboard_developer_widgets .module_list tr:nth-child(even) {background: #f5f5f5}

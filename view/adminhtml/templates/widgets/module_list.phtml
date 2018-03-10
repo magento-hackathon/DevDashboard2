@@ -1,0 +1,16 @@
+<?php
+/** @var \Firegento\DevDashboard\ViewModel\Widget\ModuleList $viewModel */
+$viewModel = $block->getData('viewModel');
+?>
+<table class="module_list">
+    <tr>
+        <th><?php echo __('Name') ?></th>
+        <th><?php echo __('Version') ?></th>
+    </tr>
+    <?php foreach ($viewModel->getModuleList() as $module): ?>
+        <tr>
+            <td><?php echo $module['name'] ?>
+            <td><?php echo $module['setup_version'] ?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
