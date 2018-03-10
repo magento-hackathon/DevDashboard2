@@ -1,10 +1,15 @@
-<?php /** @var Magento\Backend\Block\Template $block */ ?>
+<?php
+/** @var Magento\Backend\Block\Template $block */
+$childrenInColumns = array_chunk($block->getChildNames(), 3, false);
+?>
 <div class="devdashboard_developer_widgets_wrapper">
-    <div class="devdashboard_developer_widgets">
-        <?php echo $block->getChildHtml() ?>
-    </div>
-    <div class="devdashboard_developer_widgets">
-    </div>
-    <div class="devdashboard_developer_widgets">
-    </div>
+    <?php foreach (range(0, 2) as $column): ?>
+        <div class="devdashboard_developer_widgets">
+            <?php foreach (array_values($block->getChildNames()) as $index => $alias): ?>
+                <?php if ($index % 3 === $column): ?>
+                    <?php echo $block->getChildHtml($alias); ?>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </div>
+    <?php endforeach; ?>
 </div>
