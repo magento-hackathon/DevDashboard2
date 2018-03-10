@@ -5,7 +5,14 @@
             <block name="devdashboard.header" template="Firegento_DevDashboard::header.phtml"/>
             <container name="devdashboard.widgets" htmlClass="devdashboard_developer_widgets" htmlTag="div">
                 <block name="devdashboard.phpversion" template="Firegento_DevDashboard::widgets/php_version.phtml">
-                    <arguments><argument name="viewModel" xsi:type="object">Firegento\DevDashboard\ViewModel\Widget\PhpVersion</argument></arguments>
+                    <arguments>
+                        <argument name="viewModel" xsi:type="object">Firegento\DevDashboard\ViewModel\Widget\PhpVersion</argument>
+                    </arguments>
+                </block>
+                <block name="devdashboard.deployMode" template="Firegento_DevDashboard::widgets/deploy_mode.phtml">
+                    <arguments>
+                        <argument name="viewModel" xsi:type="object">Firegento\DevDashboard\ViewModel\Widget\DeployMode</argument>
+                    </arguments>
                 </block>
             </container>
         </referenceContainer>
