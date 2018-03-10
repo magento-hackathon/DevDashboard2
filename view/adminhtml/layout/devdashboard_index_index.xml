@@ -9,6 +9,9 @@
         <referenceContainer name="content">
             <block name="devdashboard.header" template="Firegento_DevDashboard::header.phtml"/>
             <block name="devdashboard.widgets" template="Firegento_DevDashboard::widgets.phtml" after="devdashboard.header">
+                <arguments>
+                    <argument name="arrangement" xsi:type="object">Firegento\DevDashboard\ViewModel\WidgetArrangement</argument>
+                </arguments>
                 <block name="devdashboard.widget.system" template="Firegento_DevDashboard::widget.phtml">
                     <arguments>
                         <argument name="title" xsi:type="string">System information</argument>

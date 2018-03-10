@@ -1,15 +1,14 @@
 <?php
 /** @var Magento\Backend\Block\Template $block */
-$childrenInColumns = array_chunk($block->getChildNames(), 3, false);
+/** @var \Firegento\DevDashboard\ViewModel\WidgetArrangement $arrangement */
+$arrangement = $block->getData('arrangement');
 ?>
 <div class="devdashboard_developer_widgets_wrapper">
-    <?php foreach (range(0, 2) as $column): ?>
-        <div class="devdashboard_developer_widgets">
-            <?php foreach (array_values($block->getChildNames()) as $index => $alias): ?>
-                <?php if ($index % 3 === $column): ?>
-                    <?php echo $block->getChildHtml($alias); ?>
-                <?php endif; ?>
-            <?php endforeach; ?>
-        </div>
+    <?php foreach ($arrangement->getChildrenInColumns($block) as $children): ?>
+    <div class="devdashboard_developer_widgets">
+        <?php foreach ($children as $child): ?>
+            <?php echo $child->toHtml(); ?>
+        <?php endforeach; ?>
+    </div>
     <?php endforeach; ?>
 </div>
