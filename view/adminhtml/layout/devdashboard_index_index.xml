@@ -3,10 +3,11 @@
     <head>
         <css src="Firegento_DevDashboard::styles.css"/>
     </head>
+    <update handle="adminhtml_cache_block"/>
     <body>
         <referenceContainer name="content">
             <block name="devdashboard.header" template="Firegento_DevDashboard::header.phtml"/>
-            <container name="devdashboard.widgets" htmlClass="devdashboard_developer_widgets" htmlTag="div">
+            <container name="devdashboard.widgets" htmlClass="devdashboard_developer_widgets" htmlTag="div" after="devdashboard.header">
                 <block name="devdashboard.widget.system" template="Firegento_DevDashboard::widget.phtml">
                     <arguments>
                         <argument name="title" xsi:type="string">System information</argument>
@@ -26,6 +27,17 @@
                         <arguments>
                             <argument name="viewModel"
                                       xsi:type="object">Firegento\DevDashboard\ViewModel\Widget\DeployMode</argument>
+                        </arguments>
+                    </block>
+                </block>
+                <block name="devdashboard.widget.cache" template="Firegento_DevDashboard::widget.phtml">
+                    <arguments>
+                        <argument name="title" xsi:type="string">Cache Status</argument>
+                    </arguments>
+                    <block class="Magento\Backend\Block\Cache" name="adminhtml.cache.container"/>
+                    <block class="Magento\Backend\Block\Cache\Additional" name="cache.additional" template="Magento_Backend::system/cache/additional.phtml">
+                        <arguments>
+                            <argument name="permissions" xsi:type="object">Magento\Backend\Block\Cache\Permissions</argument>
                         </arguments>
                     </block>
                 </block>

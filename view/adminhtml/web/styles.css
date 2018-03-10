@@ -1,8 +1,12 @@
+.devdashboard_developer_widgets {
+    display: flex;
+    align-items: flex-start;
+}
+
 .devdashboard_developer_widgets section {
     border: teal 2px solid;
     width: 33%;
-    margin-right: 0.5%;
-    float: left;
+    margin: 0 0.5% 0.5% 0;
 }
 .devdashboard_developer_widgets section > div {
     padding: 0.5em;
@@ -11,4 +15,8 @@
     background-color: teal;
     color: white;
     padding: 1em 0.5em 0.5em;
+}
+
+.devdashboard_developer_widgets #cache_grid_table .col-description {
+    display: none;
 }
