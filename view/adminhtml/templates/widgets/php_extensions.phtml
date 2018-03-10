@@ -1,0 +1,13 @@
+<?php
+/** @var Magento\Backend\Block\Template $block */
+/** @var \Firegento\Devdashboard\ViewModel\Widget\PhpExtensions $viewModel */
+$viewModel = $block->getData('viewModel');
+?>
+<div class="php_extension_widget">
+    <h3><?php echo __('PHP Extensions') ?></h3>
+    <ul>
+    <?php foreach ($viewModel->getPhpExtensions() as $extension): ?>
+        <li><?php echo $block->escapeHtml($extension); ?></li>
+    <?php endforeach; ?>
+    </ul>
+</div>

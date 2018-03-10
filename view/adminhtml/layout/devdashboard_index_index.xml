@@ -22,6 +22,12 @@
                                       xsi:type="object">Firegento\DevDashboard\ViewModel\Widget\PhpVersion</argument>
                         </arguments>
                     </block>
+                    <block name="devdashboard.phpextensions" template="Firegento_DevDashboard::widgets/php_extensions.phtml">
+                        <arguments>
+                            <argument name="viewModel"
+                                      xsi:type="object">Firegento\DevDashboard\ViewModel\Widget\PhpExtensions</argument>
+                        </arguments>
+                    </block>
                 </block>
                 <block name="devdashboard.widget.environment" template="Firegento_DevDashboard::widget.phtml">
                     <arguments>
