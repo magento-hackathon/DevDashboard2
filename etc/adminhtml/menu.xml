@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-    <add id="Firegento_DevDashboard::devdashboard" resource="Firegento_DevDashboard::devdashboard" title="Developer Dashboard" action="devdashboard/index/index" module="Firegento_DevDashboard" sortOrder="10" parent="Magento_Backend::dashboard" dependsOnModule="Magento_Backend"/></menu>
+        <add id="Firegento_DevDashboard::restoreddashboard" title="Dashboard" translate="title"
+             parent="Magento_Backend::dashboard" module="Magento_Backend" sortOrder="0"
+             action="adminhtml/dashboard" resource="Magento_Backend::dashboard"/>
+        <add id="Firegento_DevDashboard::devdashboard" resource="Firegento_DevDashboard::devdashboard"
+             title="Developer Dashboard" action="devdashboard/index/index" module="Firegento_DevDashboard"
+             sortOrder="10" parent="Magento_Backend::dashboard" dependsOnModule="Magento_Backend"/>
+
+    </menu>
 </config>
