@@ -16,7 +16,6 @@ class Index extends \Magento\Backend\App\Action
     
     public function execute()
     {
-        var_dump(__METHOD__);
-        return $this->resultPageFactory->create();  
+        return $this->resultPageFactory->create();
     }
 }

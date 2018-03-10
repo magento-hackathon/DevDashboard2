@@ -8,6 +8,5 @@
         <add id="Firegento_DevDashboard::devdashboard" resource="Firegento_DevDashboard::devdashboard"
              title="Developer Dashboard" action="devdashboard/index/index" module="Firegento_DevDashboard"
              sortOrder="10" parent="Magento_Backend::dashboard" dependsOnModule="Magento_Backend"/>
-
     </menu>
 </config>
