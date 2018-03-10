@@ -3,6 +3,9 @@
     <body>
         <referenceContainer name="content">
             <block name="devdashboard.header" template="Firegento_DevDashboard::header.phtml"/>
+            <container name="devdashboard.widgets" htmlClass="devdashboard_developer_widgets" htmlTag="div">
+                <block name="devdashboard.dummy" template="Firegento_DevDashboard::widgets/dummy.phtml"/>
+            </container>
         </referenceContainer>
     </body>
 </page>
