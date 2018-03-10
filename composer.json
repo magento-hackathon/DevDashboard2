@@ -1,0 +1,20 @@
+{
+    "name": "firegento/module-devdashboard",
+    "description": "",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "name": "Hackathon Berlin 2018 Team"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Firegento\\DevDashboard\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
