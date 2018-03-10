@@ -51,6 +51,12 @@
                     </arguments>
                     <block class="Magento\Backend\Block\Cache" name="adminhtml.cache.container"/>
                 </block>
+                <block name="devdashboard.widget.developer.configuration" template="Firegento_DevDashboard::widget.phtml">
+                    <arguments>
+                        <argument name="title" xsi:type="string">Developer Configuration</argument>
+                    </arguments>
+                    <block class="Firegento\DevDashboard\Block\Adminhtml\Dashboard\Configuration" name="dashboard.config"/>
+                </block>
             </container>
         </referenceContainer>
     </body>
