@@ -2,12 +2,13 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <css src="Firegento_DevDashboard::styles.css"/>
+        <css src="Firegento_DevDashboard::jquery.gridster.css"/>
     </head>
     <update handle="adminhtml_cache_block"/>
     <body>
         <referenceContainer name="content">
             <block name="devdashboard.header" template="Firegento_DevDashboard::header.phtml"/>
-            <container name="devdashboard.widgets" htmlClass="devdashboard_developer_widgets" htmlTag="div" after="devdashboard.header">
+            <block name="devdashboard.widgets" template="Firegento_DevDashboard::widgets.phtml">
                 <block name="devdashboard.widget.system" template="Firegento_DevDashboard::widget.phtml">
                     <arguments>
                         <argument name="title" xsi:type="string">System information</argument>
@@ -57,7 +58,8 @@
                     </arguments>
                     <block class="Firegento\DevDashboard\Block\Adminhtml\Dashboard\Configuration" name="dashboard.config"/>
                 </block>
-            </container>
+                <block name="devdashboard.scripts" template="Firegento_DevDashboard::scripts.phtml"/>
+            </block>
         </referenceContainer>
     </body>
 </page>
