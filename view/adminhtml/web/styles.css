@@ -1,6 +1,6 @@
 .devdashboard_developer_widgets_wrapper {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .devdashboard_developer_widgets {
