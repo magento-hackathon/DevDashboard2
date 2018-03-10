@@ -1,0 +1,8 @@
+<div class="dummy_widget">
+    <p>PHP Version</p>
+    <?php
+    /** @var \Firegento\Devdashboard\ViewModel\Widget\PhpVersion $viewModel */
+    $viewModel = $block->getData('viewModel');
+    ?>
+    <?php echo $viewModel->getPhpVersion() ?>
+</div>

@@ -1,6 +1,6 @@
 <?php
 
-namespace Training\TrustedShops\ViewModel;
+namespace Firegento\DevDashboard\ViewModel\Widget;
 
 use Magento\Framework\View\Element\Block\ArgumentInterface;
 
