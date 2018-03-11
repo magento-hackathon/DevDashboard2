@@ -3,11 +3,8 @@
 namespace Firegento\DevDashboard\Model;
 
 use Firegento\DevDashboard\Api\Data\ConfigInterface;
-use Firegento\DevDashboard\Model\ConfigFactory;
 use Firegento\DevDashboard\Model\ResourceModel\Config\CollectionFactory;
-
 use Magento\Framework\Exception\CouldNotSaveException;
-use Magento\Framework\Api\SearchResultsInterfaceFactory;
 
 class ConfigRepository implements \Firegento\DevDashboard\Api\ConfigRepositoryInterface
 {
@@ -16,13 +13,11 @@ class ConfigRepository implements \Firegento\DevDashboard\Api\ConfigRepositoryIn
 
     public function __construct(
         ConfigFactory $objectFactory,
-        CollectionFactory $collectionFactory,
-        SearchResultsInterfaceFactory $searchResultsFactory
+        CollectionFactory $collectionFactory
     )
     {
         $this->objectFactory = $objectFactory;
         $this->collectionFactory = $collectionFactory;
-        $this->searchResultsFactory = $searchResultsFactory;
     }
 
     /**

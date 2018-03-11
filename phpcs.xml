@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ruleset name="Magento Coding Standards">
+    <file>src</file>
+    <file>tests</file>
+
+    <rule ref="vendor/magento/marketplace-eqp/MEQP1">
+        
+    </rule>
+    <rule ref="vendor/magento/marketplace-eqp/MEQP2"/>
+
+</ruleset>

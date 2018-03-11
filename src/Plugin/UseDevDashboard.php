@@ -38,9 +38,8 @@ class UseDevDashboard
         if($config->getData('use_devdashboard')) {
             return 'devdashboard/index/index';
         }
-        else {
-            return $callable();
-        }
+
+        return $callable();
 
     }
 }
