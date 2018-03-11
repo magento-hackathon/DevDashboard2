@@ -1,0 +1,23 @@
+parameters:
+    standards_dir: vendor/magento/marketplace-eqp
+    git_dir: .
+    bin_dir: vendor/bin
+    stop_on_failure: false
+    hide_circumvention_tip: false
+    tasks:
+        git_commit_message:
+            enforce_capitalized_subject: false
+            enforce_single_lined_subject: false
+            max_subject_width: 80
+            max_body_width: 200
+            case_insensitive: false
+            multiline: true
+            additional_modifiers: ''
+        phpcs:
+            standard: %standards_dir%/MEQP2
+            show_warnings: true
+            triggered_by: ['php','phtml']
+        phplint: []
+        phan: []
+        phpmd:
+            ruleset: ['cleancode', 'codesize', 'design', 'unusedcode']
