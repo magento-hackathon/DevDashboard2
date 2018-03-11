@@ -8,7 +8,6 @@
 
 namespace Firegento\DevDashboard\Controller\Adminhtml\Ajax;
 
-
 use Firegento\DevDashboard\Model\Config;
 
 class Getconfig extends \Magento\Backend\App\Action
@@ -16,7 +15,7 @@ class Getconfig extends \Magento\Backend\App\Action
     /**
      * @var \Magento\Framework\Controller\Result\JsonFactory
      */
-    protected  $_resultJsonFactory;
+    protected $_resultJsonFactory;
 
     /**
      * @var \Magento\Backend\Model\Auth\Session
@@ -64,7 +63,7 @@ class Getconfig extends \Magento\Backend\App\Action
         try {
             /** @var  Config $config */
             $config = $this->_configRepository->getByUserId($userId);
-            if($config->getId()){
+            if ($config->getId()) {
                 $message = [
                     'success' => true,
                     'user_id' => $config->getData('user_id'),
@@ -72,18 +71,15 @@ class Getconfig extends \Magento\Backend\App\Action
                     'configuration' => $config->getData('configuration')
                 ];
             }
-        }
-        catch (\Exception $e) {
-          $message = [
+        } catch (\Exception $e) {
+            $message = [
               'success' => false,
               'mesage' => $e->getMessage()
-          ];
+            ];
         }
 
         /** @var \Magento\Framework\Controller\Result\Json $result */
         $result = $this->_resultJsonFactory->create();
         return $result->setData($message);
-
     }
-
 }

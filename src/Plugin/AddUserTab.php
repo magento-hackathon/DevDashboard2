@@ -2,7 +2,6 @@
 
 namespace Firegento\DevDashboard\Plugin;
 
-
 class AddUserTab
 {
 
@@ -25,6 +24,5 @@ class AddUserTab
         );
 
         return [];
-
     }
 }

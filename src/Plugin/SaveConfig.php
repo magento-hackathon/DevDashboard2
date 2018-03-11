@@ -2,7 +2,6 @@
 
 namespace Firegento\DevDashboard\Plugin;
 
-
 class SaveConfig
 {
 
@@ -46,7 +45,6 @@ class SaveConfig
             $model = $this->_configRepository->getByUserId($userId);
             $model->setData($data);
             $this->_configRepository->save($model);
-
         } catch (\Exception $e) {
             $this->_messageManager->addErrorMessage($e->getMessage());
         }
@@ -61,7 +59,7 @@ class SaveConfig
     {
         $filtered = [];
 
-        foreach($this->_whitelist as $key) {
+        foreach ($this->_whitelist as $key) {
             $filtered[$key] = $data[$key];
         }
         return $filtered;

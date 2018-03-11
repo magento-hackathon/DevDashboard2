@@ -8,8 +8,7 @@
 
 namespace Firegento\DevDashboard\Block;
 
-
-class UserEditTab  extends \Magento\Backend\Block\Widget\Form\Generic
+class UserEditTab extends \Magento\Backend\Block\Widget\Form\Generic
 {
     /** @var \Firegento\DevDashboard\Model\ConfigRepository */
     protected $_configRepository;
@@ -79,5 +78,4 @@ class UserEditTab  extends \Magento\Backend\Block\Widget\Form\Generic
 
         return parent::_prepareForm();
     }
-
 }

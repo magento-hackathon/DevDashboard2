@@ -18,7 +18,6 @@ class UpgradeSchema implements \Magento\Framework\Setup\UpgradeSchemaInterface
         $installer->startSetup();
 
         if (version_compare($context->getVersion(), '1.0.1', '<')) {
-
             $table = $installer->getConnection()->newTable(
                 $installer->getTable('firegento_devdashboard_config')
             )->addColumn(
@@ -78,9 +77,9 @@ class UpgradeSchema implements \Magento\Framework\Setup\UpgradeSchemaInterface
                 $installer->getIdxName(
                     'firegento_devdashboard_config',
                     ['user_id'],
-                    AdapterInterface::INDEX_TYPE_INDEX),
+                    AdapterInterface::INDEX_TYPE_INDEX
+                ),
                 ['user_id']
-
             );
             $installer->getConnection()->createTable($table);
         }

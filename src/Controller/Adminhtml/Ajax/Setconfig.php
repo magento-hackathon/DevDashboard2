@@ -10,7 +10,7 @@ class Setconfig extends \Magento\Backend\App\Action
     /**
      * @var \Magento\Framework\Controller\Result\JsonFactory
      */
-    protected  $_resultJsonFactory;
+    protected $_resultJsonFactory;
 
     /**
      * @var \Magento\Backend\Model\Auth\Session
@@ -47,24 +47,23 @@ class Setconfig extends \Magento\Backend\App\Action
         $configuration = $this->getRequest()->getParam('configuration');
         $useDevdashboard = $this->getRequest()->getParam('use_devdashboard');
 
-        if($configuration === null || $useDevdashboard === null) {
+        if ($configuration === null || $useDevdashboard === null) {
             $message = [
                 'success' => false,
                 'message' => 'You should at least give configuration or dev-dashboard'
             ];
-        }
-        else {
+        } else {
             $userId = $this->_authSession->getUser()->getId();
             try {
 
                 /** @var Config $config */
                 $config = $this->_configRepository->getByUserId($userId);
 
-                if($configuration !== null) {
+                if ($configuration !== null) {
                     $config->setData('configuration', $configuration);
                 }
 
-                if($useDevdashboard !== null) {
+                if ($useDevdashboard !== null) {
                     $config->setData('use_devdashboard', $useDevdashboard);
                 }
 
@@ -76,7 +75,6 @@ class Setconfig extends \Magento\Backend\App\Action
                     'configuration' => $config->getData('configuration'),
                     'use_devdashboard' => $config->getData('use_devdashboard')
                 ];
-
             } catch (\Exception $e) {
                 $message = [
                     'success' => false,
