@@ -3,14 +3,14 @@ namespace Firegento\DevDashboard\Setup;
 use Magento\Framework\DB\Adapter\AdapterInterface;
 use Magento\Framework\DB\Ddl\Table;
 
-class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
+class UpgradeSchema implements \Magento\Framework\Setup\UpgradeSchemaInterface
 {
     /**
      * @param \Magento\Framework\Setup\SchemaSetupInterface $setup
      * @param \Magento\Framework\Setup\ModuleContextInterface $context
      * @throws \Zend_Db_Exception
      */
-    public function install(\Magento\Framework\Setup\SchemaSetupInterface $setup, \Magento\Framework\Setup\ModuleContextInterface $context)
+    public function upgrade(\Magento\Framework\Setup\SchemaSetupInterface $setup, \Magento\Framework\Setup\ModuleContextInterface $context)
     {
         $installer = $setup;
         $installer->startSetup();
