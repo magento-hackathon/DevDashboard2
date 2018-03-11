@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <!-- DevDashboard Config Service -->
+    <route url="/V1/devdashboard-config" method="POST">
+        <service class="Firegento\DevDashboard\Api\ConfigRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Firegento_DevDashboard::devdashboard" />
+        </resources>
+    </route>
+    <route url="/V1/devdashboard-config/:user_id" method="GET">
+        <service class="Firegento\DevDashboard\Api\ConfigRepositoryInterface" method="getByUserId" />
+        <resources>
+            <resource ref="Firegento_DevDashboard::devdashboard" />
+        </resources>
+    </route>
+</routes>

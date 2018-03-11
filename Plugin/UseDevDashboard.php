@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: willi
- * Date: 10.03.18
- * Time: 20:29
- */
 
 namespace Firegento\DevDashboard\Plugin;
 

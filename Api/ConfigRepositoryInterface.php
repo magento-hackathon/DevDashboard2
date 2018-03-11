@@ -7,8 +7,16 @@ use Magento\Framework\Api\SearchCriteriaInterface;
 
 interface ConfigRepositoryInterface 
 {
+    /**
+     * @param ConfigInterface $page
+     * @return ConfigInterface
+     */
     public function save(ConfigInterface $page);
 
+    /**
+     * @param int $user_id
+     * @return ConfigInterface
+     */
     public function getByUserId($user_id);
 
 }

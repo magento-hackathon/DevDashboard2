@@ -1,6 +1,4 @@
 <?php
-/**
- */
 
 namespace Firegento\DevDashboard\Plugin;
 

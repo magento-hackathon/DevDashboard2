@@ -1,4 +1,5 @@
 <?php
+
 namespace Firegento\DevDashboard\Model;
 
 use Firegento\DevDashboard\Api\Data\ConfigInterface;
@@ -24,6 +25,11 @@ class ConfigRepository implements \Firegento\DevDashboard\Api\ConfigRepositoryIn
         $this->searchResultsFactory = $searchResultsFactory;
     }
 
+    /**
+     * @param ConfigInterface $object
+     * @return ConfigInterface
+     * @throws CouldNotSaveException
+     */
     public function save(ConfigInterface $object)
     {
         try {
@@ -34,6 +40,10 @@ class ConfigRepository implements \Firegento\DevDashboard\Api\ConfigRepositoryIn
         return $object;
     }
 
+    /**
+     * @param int $user_id
+     * @return Config
+     */
     public function getByUserId($user_id)
     {
         /** @var \Firegento\DevDashboard\Model\Config $object */
