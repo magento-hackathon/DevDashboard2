@@ -3,7 +3,7 @@ define([
 ], function ($) {
     var DevDashboard = {
         initialize: function (config, element) {
-            alert('it works');
+            //TODO
         }
     };
     return {
