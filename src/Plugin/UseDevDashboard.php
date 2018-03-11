@@ -2,7 +2,6 @@
 
 namespace Firegento\DevDashboard\Plugin;
 
-
 use Firegento\DevDashboard\Model\Config;
 
 class UseDevDashboard
@@ -21,8 +20,7 @@ class UseDevDashboard
     public function __construct(
         \Magento\Backend\Model\Auth\Session $authSession,
         \Firegento\DevDashboard\Api\ConfigRepositoryInterface $configRepository
-    )
-    {
+    ) {
         $this->_authSession = $authSession;
         $this->_configRepository = $configRepository;
     }
@@ -33,17 +31,17 @@ class UseDevDashboard
      * @param callable $callable
      * @return string
      */
-    public function aroundGetStartupPageUrl(\Magento\Backend\Model\Url $subject, callable $callable) {
+    public function aroundGetStartupPageUrl(\Magento\Backend\Model\Url $subject, callable $callable)
+    {
 
         $userId = $this->_authSession->getUser()->getId();
 
         /** @var Config $config */
         $config = $this->_configRepository->getByUserId($userId);
-        if($config->getData('use_devdashboard')) {
+        if ($config->getData('use_devdashboard')) {
             return 'devdashboard/index/index';
         }
 
         return $callable();
-
     }
 }

@@ -5,7 +5,7 @@ use Firegento\DevDashboard\Api\Data\ConfigInterface;
 use Magento\Framework\Api\SortOrder;
 use Magento\Framework\Api\SearchCriteriaInterface;
 
-interface ConfigRepositoryInterface 
+interface ConfigRepositoryInterface
 {
     /**
      * @param ConfigInterface $page
@@ -14,9 +14,8 @@ interface ConfigRepositoryInterface
     public function save(ConfigInterface $page);
 
     /**
-     * @param int $user_id
+     * @param int $userId
      * @return ConfigInterface
      */
-    public function getByUserId($user_id);
-
+    public function getByUserId($userId);
 }

@@ -46,7 +46,7 @@ class Configuration extends \Magento\Config\Block\System\Config\Edit
     public function _prepareRequestParams()
     {
         $this->originalParams = $this->getRequest()->getParam('section');
-        $this->getRequest()->setParam('section', 'dev');
+        $this->getRequest()->setParams(['section', 'dev']);
     }
 
     /**
@@ -54,7 +54,7 @@ class Configuration extends \Magento\Config\Block\System\Config\Edit
      */
     public function _resetRequestParams()
     {
-        $this->getRequest()->setParam('section', $this->originalParams);
+        $this->getRequest()->setParams(['section', $this->originalParams]);
     }
 
     /**

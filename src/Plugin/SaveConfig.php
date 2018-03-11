@@ -32,14 +32,13 @@ class SaveConfig
 
     /**
      * @param \Magento\User\Controller\Adminhtml\User\Save $subject
-     * @return array|void
+     * @return array
      * @throws \Exception
      */
     public function afterExecute(\Magento\User\Controller\Adminhtml\User\Save $subject)
     {
         $userId = (int)$subject->getRequest()->getParam('user_id');
-        $data = $subject->getRequest()->getPostValue();
-        $data = $this->_filterData($data);
+        $data = $this->_filterData($subject->getRequest()->getParams());
 
         try {
 

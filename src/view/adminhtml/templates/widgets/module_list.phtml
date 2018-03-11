@@ -7,7 +7,7 @@ $viewModel = $block->getData('viewModel');
         <th><?php echo __('Name') ?></th>
         <th><?php echo __('Version') ?></th>
     </tr>
-    <?php foreach ($viewModel->getModuleList() as $module): ?>
+    <?php foreach ($viewModel->getModuleList() as $module) : ?>
         <tr>
             <td><?php echo $module['name'] ?>
             <td><?php echo $module['setup_version'] ?></td>

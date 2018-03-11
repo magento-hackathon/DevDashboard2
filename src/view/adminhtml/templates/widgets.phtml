@@ -4,9 +4,9 @@
 $arrangement = $block->getData('arrangement');
 ?>
 <div class="devdashboard_developer_widgets_wrapper">
-    <?php foreach ($arrangement->getChildrenInColumns($block) as $children): ?>
+    <?php foreach ($arrangement->getChildrenInColumns($block) as $children) : ?>
         <div class="devdashboard_developer_widgets">
-            <?php foreach ($children as $child): ?>
+            <?php foreach ($children as $child) : ?>
                 <?php echo $child->toHtml();?>
             <?php endforeach; ?>
         </div>

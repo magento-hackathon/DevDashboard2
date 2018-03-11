@@ -4,6 +4,7 @@ parameters:
     bin_dir: vendor/bin
     stop_on_failure: false
     hide_circumvention_tip: false
+    process_timeout: 300
     tasks:
         git_commit_message:
             enforce_capitalized_subject: false
