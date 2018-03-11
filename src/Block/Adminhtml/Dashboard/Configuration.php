@@ -2,6 +2,9 @@
 
 namespace Firegento\DevDashboard\Block\Adminhtml\Dashboard;
 
+/**
+ * @method Configuration setTitle(string $title)
+ */
 class Configuration extends \Magento\Config\Block\System\Config\Edit
 {
 
@@ -46,7 +49,7 @@ class Configuration extends \Magento\Config\Block\System\Config\Edit
     public function _prepareRequestParams()
     {
         $this->originalParams = $this->getRequest()->getParam('section');
-        $this->getRequest()->setParams(['section', 'dev']);
+        $this->getRequest()->setParams(['section' => 'dev']);
     }
 
     /**
@@ -54,7 +57,7 @@ class Configuration extends \Magento\Config\Block\System\Config\Edit
      */
     public function _resetRequestParams()
     {
-        $this->getRequest()->setParams(['section', $this->originalParams]);
+        $this->getRequest()->setParams(['section' => $this->originalParams]);
     }
 
     /**
