@@ -25,6 +25,12 @@ class UseDevDashboard
         $this->_configRepository = $configRepository;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     * @param \Magento\Backend\Model\Url $subject
+     * @param callable $callable
+     * @return string
+     */
     public function aroundGetStartupPageUrl(\Magento\Backend\Model\Url $subject, callable $callable) {
 
         $userId = $this->_authSession->getUser()->getId();
