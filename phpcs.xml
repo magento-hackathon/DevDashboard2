@@ -3,9 +3,7 @@
     <file>src</file>
     <file>tests</file>
 
-    <rule ref="vendor/magento/marketplace-eqp/MEQP1">
-        
-    </rule>
+    <rule ref="vendor/magento/marketplace-eqp/MEQP1/Sniffs/PHP/GotoSniff.php"/>
     <rule ref="vendor/magento/marketplace-eqp/MEQP2"/>
 
 </ruleset>
