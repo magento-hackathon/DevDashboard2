@@ -1,5 +1,6 @@
 {
     "name": "firegento/module-devdashboard",
+    "type": "magento2-module",
     "description": "",
     "license": "OSL-3.0",
     "authors": [
@@ -8,7 +9,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "magento/framework": "^101.0.1"
+    },
     "autoload": {
         "psr-4": {
             "Firegento\\DevDashboard\\": ""
