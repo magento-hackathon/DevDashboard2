@@ -1,5 +1,6 @@
 <?php
 namespace Firegento\DevDashboard\Api\Data;
-interface ConfigInterface 
+interface ConfigInterface extends \Magento\Framework\Api\ExtensibleDataInterface
 {
+
 }

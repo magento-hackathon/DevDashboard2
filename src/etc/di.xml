@@ -1,11 +1,4 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="\Magento\User\Block\User\Edit\Tabs">
-        <plugin name="devDashboardAddTab" type="\Firegento\DevDashboard\Plugin\AddUserTab" sortOrder="10" />
-    </type>
-    <type name="\Magento\User\Controller\Adminhtml\User\Save">
-        <plugin name="devDashboardSaveConfig" type="\Firegento\DevDashboard\Plugin\SaveConfig" sortOrder="10" />
-    </type>
-    <type name="\Magento\Backend\Model\Url">
-        <plugin name="devDashboardUseDevDashboard" type="\Firegento\DevDashboard\Plugin\UseDevDashboard" sortOrder="10" />
-    </type>
+    <preference for="\Firegento\DevDashboard\Api\ConfigRepositoryInterface" type="\Firegento\DevDashboard\Model\ConfigRepository" />
+    <preference for="\Firegento\DevDashboard\Api\Data\ConfigInterface" type="\Firegento\DevDashboard\Model\Config" />
 </config>

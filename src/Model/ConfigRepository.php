@@ -36,14 +36,15 @@ class ConfigRepository implements \Firegento\DevDashboard\Api\ConfigRepositoryIn
     }
 
     /**
-     * @param int $user_id
+     * @param int $userId
      * @return Config
      */
-    public function getByUserId($user_id)
+    public function getByUserId($userId)
     {
         /** @var \Firegento\DevDashboard\Model\Config $object */
         $object = $this->objectFactory->create();
-        $object->load($user_id, 'user_id');
+        $object->load($userId, 'user_id');
+        $object->setData('user_id', $userId);
         return $object;
     }
 

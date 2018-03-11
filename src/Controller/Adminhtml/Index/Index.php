@@ -3,7 +3,7 @@ namespace Firegento\DevDashboard\Controller\Adminhtml\Index;
 class Index extends \Magento\Backend\App\Action
 {
     
-    const ADMIN_RESOURCE = 'Index';       
+    const ADMIN_RESOURCE = 'Firegento_DevDashboard::devdashboard';
         
     protected $resultPageFactory;
     public function __construct(

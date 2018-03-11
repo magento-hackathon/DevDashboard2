@@ -7,7 +7,8 @@
     <body>
         <referenceContainer name="content">
             <block name="devdashboard.header" template="Firegento_DevDashboard::header.phtml"/>
-            <block name="devdashboard.widgets" template="Firegento_DevDashboard::widgets.phtml" after="devdashboard.header">
+            <block name="devdashboard.switch" template="Firegento_DevDashboard::switch.phtml" after="devdashboard.header"/>
+            <block name="devdashboard.widgets" template="Firegento_DevDashboard::widgets.phtml" after="devdashboard.switch">
                 <arguments>
                     <argument name="arrangement" xsi:type="object">Firegento\DevDashboard\ViewModel\WidgetArrangement</argument>
                 </arguments>

@@ -18,7 +18,7 @@ class SaveConfig
 
     /**
      * SaveConfig constructor.
-     * @param \Firegento\DevDashboard\Model\ConfigFactory $configRepository
+     * @param \Firegento\DevDashboard\Model\ConfigRepository $configRepository
      * @param \Magento\Framework\Message\ManagerInterface $messageManager
      */
     public function __construct(
