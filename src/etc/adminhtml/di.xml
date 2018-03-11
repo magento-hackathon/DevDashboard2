@@ -8,4 +8,16 @@
     <type name="\Magento\Backend\Model\Url">
         <plugin name="devDashboardUseDevDashboard" type="\Firegento\DevDashboard\Plugin\UseDevDashboard" sortOrder="10" />
     </type>
+    <type name="\Magento\Backend\Controller\Adminhtml\Cache\MassRefresh">
+        <plugin name="devDashboardBackendCacheMassRefresh" type="\Firegento\DevDashboard\Plugin\BackendCacheMassRefresh" sortOrder="10"/>
+    </type>
+    <type name="\Magento\Backend\Controller\Adminhtml\Cache\MassEnable">
+        <plugin name="devDashboardBackendCacheMassEnable" type="\Firegento\DevDashboard\Plugin\BackendCacheMassEnable" sortOrder="10"/>
+    </type>
+    <type name="\Magento\Backend\Controller\Adminhtml\Cache\MassDisable">
+        <plugin name="devDashboardBackendCacheMassDisable" type="\Firegento\DevDashboard\Plugin\BackendCacheMassDisable" sortOrder="10"/>
+    </type>
+    <type name="\Magento\Config\Controller\Adminhtml\System\Config\Save">
+        <plugin name="devDashboardConfigSystemConfigSave" type="\Firegento\DevDashboard\Plugin\ConfigSystemConfigSave" sortOrder="10"/>
+    </type>
 </config>
