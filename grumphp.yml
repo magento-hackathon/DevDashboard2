@@ -1,5 +1,4 @@
 parameters:
-    standards_dir: vendor/magento/marketplace-eqp
     git_dir: .
     bin_dir: vendor/bin
     stop_on_failure: false
@@ -15,7 +14,6 @@ parameters:
             multiline: true
             additional_modifiers: ''
         phpcs:
-            standard: %standards_dir%/MEQP2
             show_warnings: true
             triggered_by: ['php','phtml']
         phplint: []
