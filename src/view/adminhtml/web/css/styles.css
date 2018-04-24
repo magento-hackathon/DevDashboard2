@@ -51,3 +51,13 @@
     background: lightgray;
     padding: 0.2em;
 }
+
+.php_extension_widget li.required-installed {
+    background-color: green;
+    color: white;
+}
+
+.php_extension_widget li.required-missing {
+    background-color: red;
+    color: white;
+}
