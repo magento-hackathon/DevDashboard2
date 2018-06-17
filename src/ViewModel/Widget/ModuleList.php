@@ -16,6 +16,10 @@ class ModuleList implements ArgumentInterface
 
     public function getModuleList()
     {
-        return $this->moduleListInterface->getAll();
+        return array_map(function($module) {
+            $module['type'] = (strpos($module['name'], 'Magento_') !== false) ?
+                __('Core') : __('External');
+            return $module;
+        }, $this->moduleListInterface->getAll());
     }
 }
