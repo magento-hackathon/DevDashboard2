@@ -3,6 +3,18 @@
 ?>
 <script type="text/javascript">
     require(['jquery', 'Magento_Theme/js/sortable'], function ($) {
+        var searchValue = null, typeFilterValue = null;
+
+        function filterModuleListTable() {
+            $("table.module_list tbody tr").filter(function() {
+                var filterValues = [searchValue, typeFilterValue].filter(Boolean);
+                var trText = $(this).text();
+                $(this).toggle(filterValues.every(function(filterValue) {
+                    return trText.toLowerCase().indexOf(filterValue) >  -1
+                }))
+            });
+        }
+
         $(window).load(function () {
             $(".devdashboard_developer_widgets").sortable({
                 placeholder: "devdashboard_developer_widgets_placeholder",
@@ -11,6 +23,16 @@
                 connectWith: ".devdashboard_developer_widgets"
             });
             $(".devdashboard_developer_widgets h2").addClass('devdashboard_developer_widgets_handle');
+
+            $("#search_module_list").on("keyup", function() {
+                searchValue = $(this).val().toLowerCase();
+                filterModuleListTable();
+            });
+
+            $(".module_list_filter_type").on("change", function() {
+                typeFilterValue = $(this).val().toLowerCase();
+                filterModuleListTable();
+            });
         });
     });
 </script>
