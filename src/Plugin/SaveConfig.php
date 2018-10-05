@@ -41,6 +41,9 @@ class SaveConfig
     public function afterExecute(\Magento\User\Controller\Adminhtml\User\Save $subject)
     {
         $userId = (int)$subject->getRequest()->getParam('user_id');
+        if ($userId === 0) {
+            return [];
+        }
         $data = $this->_filterData($subject->getRequest()->getParams());
 
         try {
