@@ -4,7 +4,11 @@ namespace Firegento\DevDashboard\Plugin;
 
 class SaveConfig
 {
-
+    /**
+     * Form values from admin user save action, that are passed to the user specific config model
+     *
+     * @var array
+     */
     protected $_whitelist =[
        'user_id',
        'configuration',
@@ -37,6 +41,9 @@ class SaveConfig
     public function afterExecute(\Magento\User\Controller\Adminhtml\User\Save $subject)
     {
         $userId = (int)$subject->getRequest()->getParam('user_id');
+        if ($userId === 0) {
+            return [];
+        }
         $data = $this->_filterData($subject->getRequest()->getParams());
 
         try {
@@ -57,11 +64,6 @@ class SaveConfig
      */
     protected function _filterData($data)
     {
-        $filtered = [];
-
-        foreach ($this->_whitelist as $key) {
-            $filtered[$key] = $data[$key];
-        }
-        return $filtered;
+        return array_intersect_key($data, array_flip($this->_whitelist));
     }
 }
