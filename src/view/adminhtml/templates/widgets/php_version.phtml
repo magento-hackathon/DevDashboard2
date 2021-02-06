@@ -1,7 +1,8 @@
 <?php
 /** @var Magento\Backend\Block\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
 /** @var \Firegento\Devdashboard\ViewModel\Widget\PhpVersion $viewModel */
 $viewModel = $block->getData('viewModel');
 ?>
-<h3><?= __('PHP Version') ?></h3>
-<p><?= $block->escapeHtml($viewModel->getPhpVersion()) ?></p>
+<h3><?= $escaper->escapeHtml(__('PHP Version')) ?></h3>
+<p><?= $escaper->escapeHtml($viewModel->getPhpVersion()) ?></p>

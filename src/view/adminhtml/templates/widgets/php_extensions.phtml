@@ -5,14 +5,14 @@
 $viewModel = $block->getData('viewModel');
 ?>
 <div class="php_extension_widget">
-    <h3><?= __('PHP Extensions') ?></h3>
+    <h3><?= $escaper->escapeHtml(__('PHP Extensions')) ?></h3>
     <ul>
     <?php foreach ($viewModel->getPhpExtensions() as $extension): ?>
         <?php $phpExtensionStatus = $viewModel->getPhpExtensionStatus($extension); ?>
         <li
             class="<?= $escaper->escapeHtmlAttr($phpExtensionStatus) ?>"
             title="<?= $escaper->escapeHtmlAttr(__($phpExtensionStatus)) ?>">
-            <?= $extension; ?>
+            <?= $escaper->escapeHtml($extension); ?>
         </li>
     <?php endforeach;  ?>
     </ul>
