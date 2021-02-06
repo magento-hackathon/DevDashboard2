@@ -3,31 +3,31 @@
 $viewModel = $block->getData('viewModel');
 ?>
 <label for="search_module_list">
-    <?php echo __('Search Module List: ') ?>
+    <?= __('Search Module List: ') ?>
 </label>
-<input id="search_module_list" name="search_module_list" placeholder="<?php echo __('Search...') ?>" type="text" />
+<input id="search_module_list" name="search_module_list" placeholder="<?= __('Search...') ?>" type="text" />
 
 <table class="module_list">
     <thead>
         <tr>
-            <th><?php echo __('Name') ?></th>
+            <th><?= __('Name') ?></th>
             <th>
-                <?php echo __('Type') ?>
+                <?= __('Type') ?>
                 <select class='module_list_filter_type' style='display:inline-block'>
-                    <option disabled selected><?php echo __('Select') ?></option>
-                    <option value='core'><?php echo __('Core') ?></option>
-                    <option value='external'><?php echo __('External') ?></option>
+                    <option disabled selected><?= __('Select') ?></option>
+                    <option value='core'><?= __('Core') ?></option>
+                    <option value='external'><?= __('External') ?></option>
                 </select>
             </th>
-            <th><?php echo __('Version') ?></th>
+            <th><?= __('Version') ?></th>
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($viewModel->getModuleList() as $module) : ?>
+        <?php foreach ($viewModel->getModuleList() as $module): ?>
             <tr>
-                <td><?php echo $module['name'] ?>
-                <td><?php echo $module['type'] ?>
-                <td><?php echo $module['setup_version'] ?></td>
+                <td><?= $module['name'] ?>
+                <td><?= $module['type'] ?>
+                <td><?= $module['setup_version'] ?></td>
             </tr>
         <?php endforeach; ?>
     </tbody>
