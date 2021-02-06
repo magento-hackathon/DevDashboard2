@@ -45,7 +45,7 @@
                     <arguments>
                         <argument name="title" xsi:type="string">Module List</argument>
                     </arguments>
-                    <block class="Hyva\Admin\Block\Adminhtml\HyvaGrid" name="devdashboard.moduleList2">
+                    <block class="Hyva\Admin\Block\Adminhtml\HyvaGrid" name="devdashboard.moduleList">
                         <arguments>
                             <argument name="grid_name" xsi:type="string">dashboard_module_list</argument>
                         </arguments>
