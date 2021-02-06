@@ -3,5 +3,5 @@
 /** @var \Firegento\Devdashboard\ViewModel\Widget\PhpVersion $viewModel */
 $viewModel = $block->getData('viewModel');
 ?>
-<h3><?php echo __('PHP Version') ?></h3>
-<p><?php echo $block->escapeHtml($viewModel->getPhpVersion()) ?></p>
+<h3><?= __('PHP Version') ?></h3>
+<p><?= $block->escapeHtml($viewModel->getPhpVersion()) ?></p>

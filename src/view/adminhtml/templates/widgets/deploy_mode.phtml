@@ -1,5 +1,6 @@
 <?php
+/** @var \Magento\Framework\View\Element\Template $block */
 /** @var \Firegento\DevDashboard\ViewModel\Widget\DeployMode $viewModel */
 $viewModel = $block->getData('viewModel');
 ?>
-<?php echo __('Deploy Mode: %1', $viewModel->getDeployMode());?>
+<?= /** @noEscape */ __('Deploy Mode: %1', $viewModel->getDeployMode());?>

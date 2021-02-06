@@ -32,7 +32,6 @@ class SaveConfig
         $this->_messageManager = $messageManager;
     }
 
-
     /**
      * @param \Magento\User\Controller\Adminhtml\User\Save $subject
      * @return array

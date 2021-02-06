@@ -1,6 +1,4 @@
-parameters:
-    git_dir: .
-    bin_dir: vendor/bin
+grumphp:
     stop_on_failure: false
     hide_circumvention_tip: false
     process_timeout: 300
@@ -14,7 +12,6 @@ parameters:
             multiline: true
             additional_modifiers: ''
         phpcs:
-            show_warnings: true
             triggered_by: ['php','phtml']
         phplint: []
         phan: []

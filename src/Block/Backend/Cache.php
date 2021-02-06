@@ -11,7 +11,7 @@ class Cache extends \Magento\Backend\Block\Cache
     protected function _construct()
     {
         $this->_controller = 'cache';
-        $this->_headerText = __('Cache Storage Management');
+        $this->_headerText = (string) __('Cache Storage Management');
         \Magento\Backend\Block\Widget\Container::_construct();
     }
 }

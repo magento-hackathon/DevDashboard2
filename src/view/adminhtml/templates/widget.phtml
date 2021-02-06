@@ -2,6 +2,6 @@
 /** @var \Magento\Backend\Block\Template $block */
 ?>
 <section>
-    <h2><?php echo $block->escapeHtml(__($block->getData('title'))) ?></h2>
-    <div class="devdashboard_developer_widgets_container"><?php echo $block->getChildHtml(); ?></div>
+    <h2><?= $block->escapeHtml(__($block->getData('title'))) ?></h2>
+    <div class="devdashboard_developer_widgets_container"><?= $block->getChildHtml(); ?></div>
 </section>
