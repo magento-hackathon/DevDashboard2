@@ -3,6 +3,7 @@
     <head>
         <css src="Firegento_DevDashboard::css/styles.css"/>
     </head>
+    <update handle="hyva_admin_grid"/>
     <update handle="adminhtml_cache_block"/>
     <body>
         <referenceContainer name="content">
@@ -44,10 +45,9 @@
                     <arguments>
                         <argument name="title" xsi:type="string">Module List</argument>
                     </arguments>
-                    <block name="devdashboard.moduleList" template="Firegento_DevDashboard::widgets/module_list.phtml">
+                    <block class="Hyva\Admin\Block\Adminhtml\HyvaGrid" name="devdashboard.moduleList2">
                         <arguments>
-                            <argument name="viewModel"
-                                      xsi:type="object">Firegento\DevDashboard\ViewModel\Widget\ModuleList</argument>
+                            <argument name="grid_name" xsi:type="string">dashboard_module_list</argument>
                         </arguments>
                     </block>
                 </block>
