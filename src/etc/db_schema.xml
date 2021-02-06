@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+
+    <table name="firegento_devdashboard_config" resource="default" engine="innodb" comment="FireGento DevDashboard Config">
+        <column xsi:type="int" name="firegento_devdashboard_config_id" padding="10" identity="false" unsigned="true" nullable="false" comment="FireGento DevDashboard Config ID"/>
+        <column xsi:type="int" name="user_id" padding="10" identity="false" nullable="false" unsigned="true" comment="Admin User ID"/>
+        <column xsi:type="timestamp" name="creation_time" nullable="false" default="CURRENT_TIMESTAMP" comment="Creation Time"/>
+        <column xsi:type="timestamp" name="update_time" nullable="false" default="CURRENT_TIMESTAMP" on_update="true" comment="Modification Time"/>
+        <column xsi:type="text" name="configuration" nullable="true" comment="Configuration"/>
+        <column xsi:type="smallint" name="use_devdashboard" unsigned="true" identity="false" nullable="false" default="0" comment="Use Developer Dashboard"/>
+
+        <constraint xsi:type="foreign" referenceId="FIREGENTO_DEVDASHBOARD_CONFIG_USER_ID_ADMIN_USER_USER_ID"
+                    table="firegento_devdashboard_config" column="user_id"
+                    referenceTable="admin_user" referenceColumn="user_id"
+                    onDelete="CASCADE"/>
+
+        <index referenceId="FIREGENTO_DEVDASHBOARD_CONFIG_USER_ID" indexType="btree">
+            <column name="user_id"/>
+        </index>
+
+    </table>
+</schema>

@@ -16,8 +16,8 @@ Provides an alternative admin dashboard for developers in Magento 2. Inspired by
     
 ## System Requirements
 
-- PHP >= 7.0
-- Magento >= 2.2.1
+- PHP >= 7.4
+- Magento >= 2.4.0
 
 ## Change log
 
