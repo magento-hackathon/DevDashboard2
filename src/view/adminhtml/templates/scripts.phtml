@@ -5,16 +5,6 @@
     require(['jquery', 'Magento_Theme/js/sortable'], function ($) {
         var searchValue = null, typeFilterValue = null;
 
-        function filterModuleListTable() {
-            $("table.module_list tbody tr").filter(function() {
-                var filterValues = [searchValue, typeFilterValue].filter(Boolean);
-                var trText = $(this).text();
-                $(this).toggle(filterValues.every(function(filterValue) {
-                    return trText.toLowerCase().indexOf(filterValue) >  -1
-                }))
-            });
-        }
-
         $(window).load(function () {
             $(".devdashboard_developer_widgets").sortable({
                 placeholder: "devdashboard_developer_widgets_placeholder",

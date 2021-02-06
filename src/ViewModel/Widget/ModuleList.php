@@ -2,10 +2,11 @@
 
 namespace Firegento\DevDashboard\ViewModel\Widget;
 
+use Hyva\Admin\Api\HyvaGridArrayProviderInterface;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
 use Magento\Framework\Module\ModuleListInterface;
 
-class ModuleList implements ArgumentInterface
+class ModuleList implements ArgumentInterface, HyvaGridArrayProviderInterface
 {
     private $moduleListInterface;
 
@@ -16,10 +17,19 @@ class ModuleList implements ArgumentInterface
 
     public function getModuleList()
     {
-        return array_map(function($module) {
+        $n = 1;
+        return array_map(function($module) use(&$n) {
+            unset($module['sequence']);
             $module['type'] = (strpos($module['name'], 'Magento_') !== false) ?
-                __('Core') : __('External');
-            return $module;
+                'Core' : 'External';
+            return ['load order' => $n++] + $module;
         }, $this->moduleListInterface->getAll());
+    }
+
+    /**
+     * @return array[]
+     */
+    public function getHyvaGridData(): array {
+        return $this->getModuleList();
     }
 }
