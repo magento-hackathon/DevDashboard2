@@ -10,6 +10,9 @@ namespace Firegento\DevDashboard\Controller\Adminhtml\Ajax;
 
 use Firegento\DevDashboard\Model\Config;
 
+/**
+ * Loads dashboard configuration (widget arrangements etc.) for current user
+ */
 class Getconfig extends \Magento\Backend\App\Action
 {
     /**
@@ -72,7 +75,7 @@ class Getconfig extends \Magento\Backend\App\Action
         } catch (\Exception $e) {
             $message = [
               'success' => false,
-              'mesage' => $e->getMessage()
+              'message' => $e->getMessage()
             ];
         }
 

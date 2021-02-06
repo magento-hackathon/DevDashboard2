@@ -13,16 +13,6 @@
                 connectWith: ".devdashboard_developer_widgets"
             });
             $(".devdashboard_developer_widgets h2").addClass('devdashboard_developer_widgets_handle');
-
-            $("#search_module_list").on("keyup", function() {
-                searchValue = $(this).val().toLowerCase();
-                filterModuleListTable();
-            });
-
-            $(".module_list_filter_type").on("change", function() {
-                typeFilterValue = $(this).val().toLowerCase();
-                filterModuleListTable();
-            });
         });
     });
 </script>
