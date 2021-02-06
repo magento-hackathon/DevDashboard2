@@ -1,0 +1,18 @@
+{
+    "firegento_devdashboard_config": {
+        "column": {
+            "firegento_devdashboard_config_id": true,
+            "user_id": true,
+            "creation_time": true,
+            "update_time": true,
+            "configuration": true,
+            "use_devdashboard": true
+        },
+        "index": {
+            "FIREGENTO_DEVDASHBOARD_CONFIG_USER_ID": true
+        },
+        "constraint": {
+            "FIREGENTO_DEVDASHBOARD_CONFIG_USER_ID_ADMIN_USER_USER_ID": true
+        }
+    }
+}
