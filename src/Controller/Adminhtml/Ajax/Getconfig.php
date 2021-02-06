@@ -27,7 +27,6 @@ class Getconfig extends \Magento\Backend\App\Action
      */
     protected $_configRepository;
 
-
     const ADMIN_RESOURCE = 'Firegento_DevDashboard::devdashboard';
 
     /**
@@ -48,7 +47,6 @@ class Getconfig extends \Magento\Backend\App\Action
         $this->_configRepository = $configRepository;
         parent::__construct($context);
     }
-
 
     /**
      * @return \Magento\Framework\Controller\Result\Json

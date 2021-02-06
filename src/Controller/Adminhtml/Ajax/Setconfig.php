@@ -83,7 +83,6 @@ class Setconfig extends \Magento\Backend\App\Action
             }
         }
 
-
         /** @var \Magento\Framework\Controller\Result\Json $result */
         $result = $this->_resultJsonFactory->create();
         return $result->setData($message);

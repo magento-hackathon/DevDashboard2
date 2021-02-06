@@ -2,6 +2,8 @@
 
 namespace Firegento\DevDashboard\Plugin;
 
+use Firegento\DevDashboard\Block\UserEditTab;
+
 class AddUserTab
 {
 
@@ -17,7 +19,7 @@ class AddUserTab
             [
                 'label' => __('Dashboard Config'),
                 'title' => __('Dashboard Config'),
-                'content' => $subject->getLayout()->createBlock('\Firegento\DevDashboard\Block\UserEditTab')->toHtml(),
+                'content' => $subject->getLayout()->createBlock(UserEditTab::class)->toHtml(),
                 'active' => true
             ],
             'roles_section'

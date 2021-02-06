@@ -43,7 +43,6 @@ class UserEditTab extends \Magento\Backend\Block\Widget\Form\Generic
 
         $baseFieldset = $form->addFieldset('base_fieldset', ['legend' => __('Dashboard Configuration')]);
 
-
         $config = $this->_configRepository->getByUserId($model->getId() ? $model->getId() : null);
 
         $baseFieldset->addField(

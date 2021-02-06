@@ -28,7 +28,7 @@ class Configuration extends \Magento\Config\Block\System\Config\Edit
         parent::__construct($context, $configStructure, $data);
 
         $this->_prepareRequestParams();
-        $this->setTitle(__('Developer configurations'));
+        $this->setTitle((string) __('Developer configurations'));
         $this->_resetRequestParams();
     }
 

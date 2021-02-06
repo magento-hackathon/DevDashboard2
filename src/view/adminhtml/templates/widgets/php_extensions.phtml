@@ -1,17 +1,18 @@
 <?php
 /** @var Magento\Backend\Block\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
 /** @var \Firegento\Devdashboard\ViewModel\Widget\PhpExtensions $viewModel */
 $viewModel = $block->getData('viewModel');
 ?>
 <div class="php_extension_widget">
-    <h3><?php echo __('PHP Extensions') ?></h3>
+    <h3><?= $escaper->escapeHtml(__('PHP Extensions')) ?></h3>
     <ul>
-    <?php foreach ($viewModel->getPhpExtensions() as $extension) : ?>
+    <?php foreach ($viewModel->getPhpExtensions() as $extension): ?>
         <?php $phpExtensionStatus = $viewModel->getPhpExtensionStatus($extension); ?>
         <li
-            class="<?php echo $phpExtensionStatus?>"
-            title="<?php echo __($phpExtensionStatus) ?>">
-            <?php echo $extension; ?>
+            class="<?= $escaper->escapeHtmlAttr($phpExtensionStatus) ?>"
+            title="<?= $escaper->escapeHtmlAttr(__($phpExtensionStatus)) ?>">
+            <?= $escaper->escapeHtml($extension); ?>
         </li>
     <?php endforeach;  ?>
     </ul>

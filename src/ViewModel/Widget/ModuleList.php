@@ -18,7 +18,7 @@ class ModuleList implements ArgumentInterface, HyvaGridArrayProviderInterface
     public function getModuleList()
     {
         $n = 1;
-        return array_map(function($module) use(&$n) {
+        return array_map(function ($module) use (&$n) {
             unset($module['sequence']);
             $module['type'] = (strpos($module['name'], 'Magento_') !== false) ?
                 'Core' : 'External';
@@ -29,7 +29,8 @@ class ModuleList implements ArgumentInterface, HyvaGridArrayProviderInterface
     /**
      * @return array[]
      */
-    public function getHyvaGridData(): array {
+    public function getHyvaGridData(): array
+    {
         return $this->getModuleList();
     }
 }
