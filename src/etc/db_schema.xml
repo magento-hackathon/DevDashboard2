@@ -4,12 +4,16 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
 
     <table name="firegento_devdashboard_config" resource="default" engine="innodb" comment="FireGento DevDashboard Config">
-        <column xsi:type="int" name="firegento_devdashboard_config_id" padding="10" identity="false" unsigned="true" nullable="false" comment="FireGento DevDashboard Config ID"/>
+        <column xsi:type="int" name="firegento_devdashboard_config_id" padding="10" identity="true" unsigned="true" nullable="false" comment="FireGento DevDashboard Config ID"/>
         <column xsi:type="int" name="user_id" padding="10" identity="false" nullable="false" unsigned="true" comment="Admin User ID"/>
         <column xsi:type="timestamp" name="creation_time" nullable="false" default="CURRENT_TIMESTAMP" comment="Creation Time"/>
         <column xsi:type="timestamp" name="update_time" nullable="false" default="CURRENT_TIMESTAMP" on_update="true" comment="Modification Time"/>
         <column xsi:type="text" name="configuration" nullable="true" comment="Configuration"/>
         <column xsi:type="smallint" name="use_devdashboard" unsigned="true" identity="false" nullable="false" default="0" comment="Use Developer Dashboard"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="firegento_devdashboard_config_id"/>
+        </constraint>
 
         <constraint xsi:type="foreign" referenceId="FIREGENTO_DEVDASHBOARD_CONFIG_USER_ID_ADMIN_USER_USER_ID"
                     table="firegento_devdashboard_config" column="user_id"
