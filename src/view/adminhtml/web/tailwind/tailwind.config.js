@@ -1,7 +1,7 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-    purge: ["../../templates/*.phtml"],
+    purge: ["../../templates/**/*.phtml"],
     darkMode: false,
     theme: {
         fontSize: {
