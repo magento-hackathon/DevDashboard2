@@ -1,1 +1,31 @@
-<h1>Developer Dashboard</h1>
+<h2 class="text-gray-700 text-3xl font-medium">Developer Dashboard</h1>
+
+<style>
+.devdashboard_developer_widgets #cache_grid_table .col-description {
+    display: none;
+    margin: 0;
+}
+.devdashboard_developer_widgets_placeholder {
+    border: 3px darkgray dashed!important;
+    margin-bottom: 1em;
+}
+.php_extension_widget ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.php_extension_widget li {
+    flex: 1 0 auto;
+    margin: 0.2em;
+    background: lightgray;
+    padding: 0.2em;
+}
+.php_extension_widget li.required-installed {
+    background-color: green;
+    color: white;
+}
+.php_extension_widget li.required-missing {
+    background-color: red;
+    color: white;
+}
+</style>
