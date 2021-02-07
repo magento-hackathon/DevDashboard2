@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - migrate to declarative schema
 - adds Hyvä_Admin for Dashboard Page
 - replaces old module list with Hyvä version of module list
+- replaces most CSS with Tailwind
 - adds "enable dashboard" config option to own admin account edit page 
 
 ## 0.2.0 - 2018-10-05
