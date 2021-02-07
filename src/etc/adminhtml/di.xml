@@ -1,9 +1,6 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="\Magento\User\Block\User\Edit\Tabs">
-        <plugin name="devDashboardAddTab" type="\Firegento\DevDashboard\Plugin\AddUserTab" sortOrder="10" />
-    </type>
-    <type name="\Magento\User\Controller\Adminhtml\User\Save">
-        <plugin name="devDashboardSaveConfig" type="\Firegento\DevDashboard\Plugin\SaveConfig" sortOrder="10" />
+    <type name="Magento\Backend\Controller\Adminhtml\System\Account\Save">
+        <plugin name="devDashboardSaveUserConfig" type="Firegento\DevDashboard\Plugin\SaveUserConfig" sortOrder="10" />
     </type>
     <type name="\Magento\Backend\Model\Url">
         <plugin name="devDashboardUseDevDashboard" type="\Firegento\DevDashboard\Plugin\UseDevDashboard" sortOrder="10" />
@@ -19,5 +16,9 @@
     </type>
     <type name="\Magento\Config\Controller\Adminhtml\System\Config\Save">
         <plugin name="devDashboardConfigSystemConfigSave" type="\Firegento\DevDashboard\Plugin\ConfigSystemConfigSave" sortOrder="10"/>
+    </type>
+    <preference for="Magento\Backend\Block\System\Account\Edit\Form" type="Firegento\DevDashboard\Block\System\Account\Edit\Form"/>
+    <type name="Magento\User\Model\User">
+        <plugin name="devDashboardUserModelLoad" type="Firegento\DevDashboard\Plugin\Model\User" sortOrder="10"/>
     </type>
 </config>
