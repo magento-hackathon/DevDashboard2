@@ -5,6 +5,9 @@ namespace Firegento\DevDashboard\Controller\Adminhtml\Ajax;
 use Firegento\DevDashboard\Model\Config;
 use Magento\Backend\App\Action;
 
+/**
+ * Saves dashboard configuration (widget arrangements etc.) for current user
+ */
 class Setconfig extends \Magento\Backend\App\Action
 {
     /**
