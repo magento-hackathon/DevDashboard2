@@ -67,4 +67,13 @@ class Configuration extends \Magento\Config\Block\System\Config\Edit
     {
         return $this->getUrl('adminhtml/system_config/save', ['section' => 'dev']);
     }
+
+    protected function _toHtml()
+    {
+        $html = parent::_toHtml();
+        if (strpos($html, 'class="section-config"') === false) {
+            return 'Developer configuration is only available in developer mode';
+        }
+        return $html;
+    }
 }
