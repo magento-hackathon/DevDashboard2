@@ -22,7 +22,7 @@ class ModuleList implements ArgumentInterface, HyvaGridArrayProviderInterface
             unset($module['sequence']);
             $module['type'] = (strpos($module['name'], 'Magento_') !== false) ?
                 'Core' : 'External';
-            return ['load order' => $n++] + $module;
+            return ['load_order' => $n++] + $module;
         }, $this->moduleListInterface->getAll());
     }
 
