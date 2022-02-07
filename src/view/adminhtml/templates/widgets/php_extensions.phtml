@@ -5,12 +5,12 @@
 $viewModel = $block->getData('viewModel');
 ?>
 <div class="php_extension_widget">
-    <h3><?= $escaper->escapeHtml(__('PHP Extensions')) ?></h3>
-    <ul>
+    <h4 class="text-xl font-semibold text-gray-700"><?= $escaper->escapeHtml(__('PHP Extensions')) ?></h4>
+    <ul class="my-3 flex flex-wrap m-1">
     <?php foreach ($viewModel->getPhpExtensions() as $extension): ?>
         <?php $phpExtensionStatus = $viewModel->getPhpExtensionStatus($extension); ?>
         <li
-            class="<?= $escaper->escapeHtmlAttr($phpExtensionStatus) ?>"
+            class="<?= $escaper->escapeHtmlAttr($phpExtensionStatus) ?> m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-2 text-sm leading-loose" style="flex: 0 1 auto"
             title="<?= $escaper->escapeHtmlAttr(__($phpExtensionStatus)) ?>">
             <?= $escaper->escapeHtml($extension); ?>
         </li>
