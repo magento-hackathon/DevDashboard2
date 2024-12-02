@@ -10,17 +10,12 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "hyva-themes/module-magento2-admin": "^1.1",
-        "magento/framework": ">=103.0.0",
-        "magento/module-config": ">=101.0.0",
-        "magento/module-backend": ">=100.2.0"
-    },
-    "require-dev": {
-        "phpro/grumphp": "^1.0",
-        "magento/magento-coding-standard": "dev-master@dev",
-        "php-parallel-lint/php-parallel-lint": "^1.2",
-        "phan/phan": "^4.0",
-        "phpmd/phpmd": "^2.6"
+        "hyva-themes/module-magento2-admin": "dev-main",
+        "magento/framework": "^103.0",
+        "magento/module-config": "^101.2@beta",
+        "magento/module-backend": "^102.0@beta",
+        "symfony/process": "^5.4",
+        "composer": "^2"
     },
     "repositories": {
         "magento": {
@@ -43,5 +38,17 @@
     "scripts": {
         "check-style": "vendor/bin/phpcs -p --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
         "fix-style": "vendor/bin/phpcbf -p --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpro/grumphp": true
+        }
+    },
+    "require-dev": {
+        "phpro/grumphp": "*",
+        "magento/magento-coding-standard": "*",
+        "php-parallel-lint/php-parallel-lint": "*",
+        "phan/phan": "*",
+        "phpmd/phpmd": "*"
     }
 }
