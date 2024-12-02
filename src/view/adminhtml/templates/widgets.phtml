@@ -3,9 +3,9 @@
 /** @var \Firegento\DevDashboard\ViewModel\WidgetArrangement $arrangement */
 $arrangement = $block->getData('arrangement');
 ?>
-<div class="devdashboard_developer_widgets_wrapper">
+<div class="flex items-stretch">
     <?php foreach ($arrangement->getChildrenInColumns($block) as $children): ?>
-        <div class="devdashboard_developer_widgets">
+        <div class="devdashboard_developer_widgets w-1/2 pb-56 mx-5">
             <?php foreach ($children as $child): ?>
                 <?= $child->toHtml();?>
             <?php endforeach; ?>

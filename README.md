@@ -27,6 +27,14 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
+### Using Tailwind CSS
+
+In the directory `src/view/adminhtml/web/tailwind` run `npm install` first.
+
+While developing with CSS, it is recommended to work with the full stylesheet. To generate it, run `npm run build-dev` in the same directory. Before committing, create the purged and minified CSS with `npm run build-prod`.
+
+If you need to add missing classes for new colors, you need to define them in `src/view/adminhtml/web/tailwind/tailwind.config.js`
+
 ## Credits
 
 - [Magento Hackathon][link-author]
