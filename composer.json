@@ -10,12 +10,11 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "hyva-themes/module-magento2-admin": "dev-main",
-        "magento/framework": "^103.0",
-        "magento/module-config": "^101.2@beta",
-        "magento/module-backend": "^102.0@beta",
-        "symfony/process": "^5.4",
-        "composer": "^2"
+        "hyva-themes/module-magento2-admin": "^1.1",
+        "magento/framework": ">=103.0.0",
+        "magento/module-config": ">=101.0.0",
+        "magento/module-backend": ">=100.2.0",
+        "symfony/process": ">=5.4.46"
     },
     "repositories": {
         "magento": {
@@ -41,7 +40,9 @@
     },
     "config": {
         "allow-plugins": {
-            "phpro/grumphp": true
+            "phpro/grumphp": true,
+            "magento/composer-dependency-version-audit-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
     "require-dev": {
