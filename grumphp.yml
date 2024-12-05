@@ -17,3 +17,10 @@ grumphp:
         phan: []
         phpmd:
             ruleset: ['cleancode', 'codesize', 'design', 'unusedcode']
+        npm_script:
+            script: build-prod
+            triggered_by: [css]
+            working_directory: "./src/view/adminhtml/web/tailwind"
+            is_run_task: true
+            silent: false
+
