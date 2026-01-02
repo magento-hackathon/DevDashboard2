@@ -14,7 +14,8 @@
         "magento/framework": ">=103.0.0",
         "magento/module-config": ">=101.0.0",
         "magento/module-backend": ">=100.2.0",
-        "symfony/process": ">=5.4.46"
+        "symfony/process": ">=5.4.46",
+        "composer/composer": "^2.9"
     },
     "repositories": {
         "magento": {
