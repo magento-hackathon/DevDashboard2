@@ -42,7 +42,8 @@
         "allow-plugins": {
             "phpro/grumphp": true,
             "magento/composer-dependency-version-audit-plugin": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
         }
     },
     "require-dev": {
